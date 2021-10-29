@@ -19,6 +19,10 @@ public class ProductListGeneratorImpl implements ProductListGenerator {
         List<Product> result = new ArrayList<>();
         IntStream.range(50, random.nextInt(200))
                 .forEach(i -> result.add(productGenerator.generate()));
+        IntStream.range(50, random.nextInt(200))
+                .forEach(i -> result.add(productGenerator.generate()));
+        IntStream.range(50, random.nextInt(200))
+                .forEach(i -> result.add(productGenerator.generate()));
         return result;
     }
 }
