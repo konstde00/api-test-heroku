@@ -1,5 +1,6 @@
 package controller;
 
+import java.math.BigInteger;
 import java.util.List;
 import model.Product;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,7 +15,7 @@ public class ProductController {
             = new ProductListGeneratorImpl();
 
     @GetMapping("/testLink/{id}")
-    public List<Product> getProduct(@PathVariable Long id) {
+    public List<Product> getProduct(@PathVariable BigInteger id) {
         return productListGenerator.generateProductList();
     }
 }
