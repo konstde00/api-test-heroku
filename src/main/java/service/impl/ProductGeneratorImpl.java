@@ -34,10 +34,10 @@ public class ProductGeneratorImpl implements ProductGenerator {
     }
 
     private static final String generateProductName() {
-        return PRODUCT + random.nextInt(2000);
+        return PRODUCT + random.nextInt(1000);
     }
 
     private static final int generateProductAmount() {
-        return random.nextInt(5000);
+        return random.nextInt(2000);
     }
 }
