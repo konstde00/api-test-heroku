@@ -14,8 +14,15 @@ public class ProductController {
     private static final ProductListGenerator productListGenerator
             = new ProductListGeneratorImpl();
 
-    @GetMapping("/testLink/testWebSourceReader")
+    @GetMapping("/testLink/{id}")
     public List<Product> getProduct(@PathVariable BigInteger id) {
+        Product testProduct = new Product("123e4567-e89b-12d3-a456-426655440000",
+                "Kettle", 3);
+        return List.of(testProduct);
+    }
+
+    @GetMapping("/testLink/testWebSourceReader")
+    public List<Product> getProductTest() {
         Product testProduct = new Product("123e4567-e89b-12d3-a456-426655440000",
                 "Kettle", 3);
         return List.of(testProduct);
