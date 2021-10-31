@@ -17,7 +17,7 @@ public class ProductListGeneratorImpl implements ProductListGenerator {
     @Override
     public List<Product> generateProductList() {
         List<Product> result = new ArrayList<>();
-        int size = random.nextInt(50) + 300;
+        int size = random.nextInt(500) + 500;
         for (int i = 0; i <= size; i++) {
             result.add(productGenerator.generate());
         }
